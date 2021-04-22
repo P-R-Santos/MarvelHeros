@@ -16,7 +16,7 @@ import { CardFooterComponent } from './card/card-footer/card-footer.component';
     CardComponent,
     CardHeaderComponent,
     CardBodyComponent,
-    CardFooterComponent
+    CardFooterComponent,
   ],
   imports: [
     BrowserModule,

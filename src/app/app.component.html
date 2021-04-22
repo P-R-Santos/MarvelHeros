@@ -1,22 +1,7 @@
 <section class="s-1">
   <h1>Meus heróis favoritos</h1>
 </section>
-<section class="s-2">
-  <h2>Top 5</h2>
-  <article>
-    <app-card *ngFor="let hero of heroes" class="s-2-card">
-      <app-card-header>
-        <div class="s-2-card-header">
-          <img [src]="hero.thumbnail.path + '/portrait_small.' + hero.thumbnail.extension" alt="hero image">
-          <h3>{{hero.name}}</h3>
-        </div>
-      </app-card-header>
-      <app-card-body>
-        <p>{{hero.description}}</p>
-      </app-card-body>
-    </app-card>
-  </article>
-</section>
+<router-outlet></router-outlet>
 <section class="s-3">
   <h2>Qual o seu?</h2>
   <div>

@@ -1,0 +1,16 @@
+<section class="s-2">
+    <h2>Top 5</h2>
+    <article>
+      <app-card *ngFor="let hero of heroes" class="s-2-card">
+        <app-card-header>
+          <div class="s-2-card-header">
+            <img [src]="hero.thumbnail.path + '/portrait_small.' + hero.thumbnail.extension" alt="hero image">
+            <h3>{{hero.name}}</h3>
+          </div>
+        </app-card-header>
+        <app-card-body>
+          <p>{{hero.description}}</p>
+        </app-card-body>
+      </app-card>
+    </article>
+  </section>
