@@ -1,22 +1,20 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpErrorResponse, HttpHeaders } from '@angular/common/http';
-import { Observable, throwError } from 'rxjs';
-import { retry, catchError } from 'rxjs/operators';
 import {Md5} from 'ts-md5/dist/md5';
 
-import { publicKey, privateKey } from '../../api-key'
+import { publicKey, privateKey } from '../../../api-key'
 
 @Injectable({
   providedIn: 'root'
 })
-export class AppService {
+export class HeroesService {
 
   url: string = 'https://gateway.marvel.com:443';
   
   constructor(private httpClient: HttpClient) { }
 
   /**
-   * cria o campo httpOption
+   * Cria o campo httpOption
    */
   createOption(){
     let httpOptions;

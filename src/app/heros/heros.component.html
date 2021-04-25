@@ -1,16 +1,16 @@
-<section class="s-2">
+<section class="s-hero">
     <h2>Top 5</h2>
     <article>
-      <app-card *ngFor="let hero of heroes" class="s-2-card">
+      <app-card *ngFor="let hero of heroes">
         <app-card-header>
-          <div class="s-2-card-header">
-            <img [src]="hero.thumbnail.path + '/portrait_small.' + hero.thumbnail.extension" alt="hero image">
-            <h3>{{hero.name}}</h3>
-          </div>
+          <h3>{{hero.name}}</h3>
         </app-card-header>
         <app-card-body>
-          <p>{{hero.description}}</p>
+          <img [src]="hero.thumbnail.path + '/standard_large.' + hero.thumbnail.extension" alt="hero image">
         </app-card-body>
+        <app-card-footer>
+          <button (click)="goToPage('details', hero)">Detalhes</button>
+        </app-card-footer>
       </app-card>
     </article>
   </section>

@@ -1,4 +1,4 @@
-.s-2{
+.s-hero{
     h2{
         text-align: center;
         font-size: 3rem;
@@ -9,14 +9,16 @@
         flex-direction: row;
         flex-wrap: wrap;
         app-card{
-            flex-basis: 25%;
-            .s-2-card-header{
-                display: flex;
-                flex-direction: row;
-                h3{
-                    flex: 1;
-                    text-align: center;
-                }
+            flex-basis: 25%;              
+            h3{
+                flex: 1;
+                text-align: center;
+            }
+            img{
+                width: 100%;
+            }
+            button{
+                width: 100%;
             }
         }
     }

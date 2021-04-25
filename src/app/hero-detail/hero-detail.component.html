@@ -1,1 +1,8 @@
-<p>hero-detail works!</p>
+<section class="hero-detail">
+  <h3>{{hero.name}}</h3>
+  <article>
+    <img [src]="hero.thumbnail.path + '/standard_large.' + hero.thumbnail.extension" alt="hero image">
+    <p>{{hero.description}}</p>
+  </article>
+  <button (click)="goToPage('heroes')">Voltar</button>
+</section>

@@ -2,22 +2,24 @@
   <h1>Meus heróis favoritos</h1>
 </section>
 <router-outlet></router-outlet>
-<section class="s-3">
+<section class="s-2">
   <h2>Qual o seu?</h2>
   <div>
     <input type="text" [(ngModel)]="searchText">
-    <button (click)="getHeroes(searchText, true)">Pesquisar</button>
+    <button (click)="getHeroes(searchText)">Pesquisar</button>
   </div>
   <article>
     <app-card *ngFor="let hero of otherHero">
       <app-card-header>
-        <div class="s-3-card-header">
-          <img [src]="hero.thumbnail.path + '/portrait_small.' + hero.thumbnail.extension" alt="hero image">
-          <h3>{{hero.name}}</h3>
+        <div class="s-2-card-header">
         </div>
       </app-card-header>
       <app-card-body>
-        <p>{{hero.description}}</p>
+        <img [src]="hero.thumbnail.path + '/standard_xlarge.' + hero.thumbnail.extension" alt="hero image">
+        <div>
+          <h3>{{hero.name}}</h3>
+          <p>{{hero.description}}</p>
+        </div>
       </app-card-body>
     </app-card>
   </article>
